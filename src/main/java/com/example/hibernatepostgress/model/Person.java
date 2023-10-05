@@ -4,10 +4,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.Proxy;
 
 import java.util.Date;
 
 @Entity
+@Proxy(lazy = false)
 public class Person {
 
     @Id
